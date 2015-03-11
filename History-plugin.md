@@ -2,11 +2,11 @@ History plugin enables file versioning.
 
 When user uploads or copies file that already exists, the older file is versioned.
 
-![File view with History plugin](http://www.kloudspeaker.org/images/screenshots/history_quota.png)
+![File view with History plugin](http://www.kloudspeaker.com/images/screenshots/history_quota.png)
 
 Versioned files are shown in the file listing, where they can be viewed, removed or restored.
 
-![File history](http://www.kloudspeaker.org/images/screenshots/history.png)
+![File history](http://www.kloudspeaker.com/images/screenshots/history.png)
 
 # Installation & Configuration
 
@@ -58,6 +58,6 @@ Example full configuration:
 
 # License
 
-Plugin is released with Commercial Plugin license (http://www.kloudspeaker.org/license.php).
+Plugin is released with Commercial Plugin license (http://www.kloudspeaker.com/license.php).
 
 License costs 150 EUR, and download link will be provided after successful license payment.

@@ -2,11 +2,11 @@ Folder quota plugin allows setting maximum space for a folder.
 
 For a user, quota is visible in the file view header. When any action (upload, copy, move etc) would exceed the quota available, it is rejected.
 
-![File list view with Quota plugin](http://www.kloudspeaker.org/images/screenshots/history_quota.png)
+![File list view with Quota plugin](http://www.kloudspeaker.com/images/screenshots/history_quota.png)
 
 Quota is set by admin in root folder level:
 
-![Quota admin](http://www.kloudspeaker.org/images/screenshots/quota_admin.png)
+![Quota admin](http://www.kloudspeaker.com/images/screenshots/quota_admin.png)
 
 # Installation & Configuration
 
@@ -46,6 +46,6 @@ Example full configuration:
 
 # License
 
-Plugin is released with Commercial Plugin license (http://www.kloudspeaker.org/license.php).
+Plugin is released with Commercial Plugin license (http://www.kloudspeaker.com/license.php).
 
 License costs 150 EUR, and download link will be provided after successful license payment.

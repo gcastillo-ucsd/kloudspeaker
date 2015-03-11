@@ -18,7 +18,7 @@ Whenever backend plugins are installed or updated, open the Kloudspeaker updater
 
 ## Commercial Plugins
 
-Following plugins are released with Commercial Plugin license (for more information, see [license page](http://www.kloudspeaker.org/license.php)).
+Following plugins are released with Commercial Plugin license (for more information, see [license page](http://www.kloudspeaker.com/license.php)).
 
   * [[Quota|Quota-plugin]]
   * [[History|History-plugin]]
