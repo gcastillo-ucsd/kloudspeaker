@@ -1,6 +1,6 @@
 # 1. Installation
 
-1. Download latest installation package from http://www.kloudspeaker.org/download/latest.php
+1. Download latest installation package from http://www.kloudspeaker.com/download/latest.php
 2. Unzip Kloudspeaker installation package (for example with command "`unzip kloudspeaker_[VER].zip`")
 3. Copy extracted folder "`kloudspeaker`" into your web server root folder (or any other place of your choice)
 4. Open installer at address "`http://your.host.name/kloudspeaker/backend/install/`". Installer will guide you through the configuration, for more information see [[Configuration|Configuration]].
