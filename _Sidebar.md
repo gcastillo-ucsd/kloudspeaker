@@ -1,3 +1,4 @@
+* [[Home|Home]]
 * [[Installation|Installation]]
 * [[Configuration|Configuration]]
  * [[Client configuration options|Client-configuration-options]]
