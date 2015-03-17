@@ -40,7 +40,7 @@ History plugin has following options:
 **NOTE!** Folder used for version storage *should not* be
 
   * exposed via web server (ie. use location outside web root), only PHP needs read/write access to it
-  * accessed/modified by other than plugin itself, as any modifications to the internal version data files may corrupt versioning. This includes a) publishing the folder in Kloudspeaker itself b) modifying the files directly with FTP  or server filesystem etc
+  * accessed/modified by other than plugin itself, as any modifications to the internal version data files may corrupt versioning. This includes a) publishing the folder in Kloudspeaker itself and b) modifying the files directly with FTP or server filesystem etc.
 
 Example full configuration:
 
