@@ -14,7 +14,7 @@ History plugin requires Kloudspeaker version 2.6 or later.
 
 History plugin is installed with following steps:
 
-1. Extract plugin zip package into "backend/plugin" folder
+1. Extract plugin zip package into "backend/plugin" folder (for installing plugin outside installation folder, see [[customization instructions|Customizing-resources#plugins]])
 2. Add plugin configuration into "configuration.php" (see configuration options below)
 3. Run Kloudspeaker updater
 
@@ -58,6 +58,6 @@ Example full configuration:
 
 # License
 
-Plugin is released with Commercial Plugin license (http://www.kloudspeaker.com/license.php).
+Plugin is released with [Commercial Plugin license](http://www.kloudspeaker.com/license.php).
 
-License costs 150 EUR, and download link will be provided after successful license payment.
+License costs 150 EUR, and can be downloaded from [Download page](http://www.kloudspeaker.com/downloads.php).
