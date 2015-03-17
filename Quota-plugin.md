@@ -14,7 +14,7 @@ Quota plugin requires Kloudspeaker version 2.6 or later.
 
 Quota plugin is installed with following steps:
 
-1. Extract plugin zip package into "backend/plugin" folder
+1. Extract plugin zip package into "backend/plugin" folder (for installing plugin outside installation folder, see [[customization instructions|Customizing-resources#plugins]])
 2. Add plugin configuration into "configuration.php" (see configuration options below)
 3. Run Kloudspeaker updater
 
