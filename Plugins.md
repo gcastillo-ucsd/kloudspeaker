@@ -2,9 +2,9 @@ Kloudspeaker can have plugins in client and backend.
 
 Client plugin adds new functionality to the UI, and backend plugin adds new backend functionality like service interface, event handling etc. Some plugin packages have both, for example [[Comments plugin|Comments-plugin]].
 
-Installation package contains plugins which only needs to be configured, see "Built-in plugins" below, and plugin specific instructions on how to configure them.
-
 # Installation
+
+Installation package contains plugins which only needs to be configured, see "Built-in plugins" below. Each plugin instructions contains plugin specific instructions on how to configure them.
 
 For syntax on how to register plugin in client or backend configuration, see [[Configuration|Configuration]].
 
