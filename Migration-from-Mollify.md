@@ -1,8 +1,8 @@
-Kloudspeaker is based on [Mollify](https://github.com/sjarvela/mollify), is versions 2.6.x are fully compatible.
+Kloudspeaker is based on [Mollify](https://github.com/sjarvela/mollify), and versions starting from 2.6.7 are fully compatible.
 
 To migrate existing Mollify installation to Kloudspeaker, do following:
 
-1. Update Mollify to latest version, at minimum 2.6.x
+1. Update Mollify to latest version, at minimum 2.6.7 (as this is the starting version for Kloudspeaker)
 
 2. Download and extract latest Kloudspeaker installation package
 
