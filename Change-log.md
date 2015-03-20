@@ -1,6 +1,6 @@
 ### 2.6.7
 
-Released 2015/n/n
+Released 2015/3/20
 
 * First Kloudspeaker release
 
