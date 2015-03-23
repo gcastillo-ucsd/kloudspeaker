@@ -1,5 +1,6 @@
 * [[Home|Home]]
 * [[Installation|Installation]]
+ * [[Migration from Mollify|Migration-from-mollify]]
 * [[Configuration|Configuration]]
  * [[Client configuration options|Client-configuration-options]]
  * [[Backend configuration options|Backend-configuration-options]]
