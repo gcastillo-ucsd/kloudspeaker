@@ -6,6 +6,7 @@
  * [[Backend configuration options|Backend-configuration-options]]
  * [[Languages|Languages]]
  * [[Uploader|Uploader]]
+ * [[Mail|Mail]]
 * [[Troubleshooting|Troubleshooting]]
 * [[Plugins|Plugins]]
  * [[Quota|Quota-plugin]]
