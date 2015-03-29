@@ -1,3 +1,9 @@
+### 2.6.7.1
+
+Released 2015/3/29
+
+* Fixed project rename related issues
+
 ### 2.6.7
 
 Released 2015/3/20
