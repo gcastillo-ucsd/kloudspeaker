@@ -16,6 +16,7 @@
  * [[Comments|Comments-plugin]]
  * [[Archiver|Archiver-plugin]]
 * [[Permissions|Permissions]]
+* [[External interface|External-interface]]
 * Customizations
  * [[Resources|Customizing-resources]]
  * [[Client resource map|Client-resource-map]]
