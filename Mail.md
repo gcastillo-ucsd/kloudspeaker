@@ -23,7 +23,7 @@ It is possible to use third-party mail sender library [PHPMailer](https://github
 		...
 	);
 
-To use SMTP server, add following configuration:
+PHPMailerSender makes it possible to use external SMTP server, it can be configured like this:
 
 	$CONFIGURATION = array(
 		"mail_smtp" => array(
