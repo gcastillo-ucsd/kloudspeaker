@@ -12,7 +12,7 @@ Setting "mail_notification_from" defines the sender address (and optionally also
 
 ## PHPMailerSender
 
-Default mail sender uses PHP internal mail functionality.
+Default mail sender uses [PHP internal mail](http://php.net/manual/en/book.mail.php) functionality, which sends mail as configured in the PHP server configuration.
 
 It is possible to use third-party mail sender library [PHPMailer](https://github.com/PHPMailer/PHPMailer) by changing the sender class:
 
@@ -20,12 +20,6 @@ It is possible to use third-party mail sender library [PHPMailer](https://github
 		"enable_mail_notification" => TRUE,
 		"mail_notification_from" => "admin@yourhost.com",
 		"mail_sender_class" => "mail/PHPMailerSender.class.php",
-		"mail_smtp" => array(
-			"host" => MAIL_SERVER_HOST,
-			"username" => USERNAME,
-			"password" => PASSWORD,
-			"secure" => TRUE
-		)
 		...
 	);
 
