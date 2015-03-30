@@ -1,3 +1,9 @@
+### Quota plugin 1.1
+
+Released 2015/3/30
+
+* Added quota refresh action for users
+
 ### 2.6.7.1
 
 Released 2015/3/29
