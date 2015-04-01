@@ -36,6 +36,7 @@ History plugin has following options:
 * `exclude_folders`: List of root folder IDs that are excluded from version handling, by default all folders are included
 * `store_current_on_restore`: Whether current file is versioned when older version is restored, by default TRUE
 * `version_on_copy`: Whether copy action over existing file will version the current file, by default TRUE
+* `version_on_move`: Whether move action over existing file will version the current file, by default FALSE. Note that enabling this feature will delete the source file, as it will become a version on the target file.
 
 **NOTE!** Folder used for version storage *should not* be
 
