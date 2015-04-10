@@ -8,7 +8,11 @@ To enable mail sending, configure it with following settings:
 		...
 	);
 
-Setting "mail_notification_from" defines the sender address (and optionally also name) used in mails (for example "`admin@yourhost.com`", "`Administrator admin@yourhost.com`"). If no value is given (default), mail is sent with system default.
+Setting "mail_notification_from" defines the sender address (and optionally also name) used in mails.
+
+For example, values can be given with address only "`admin@yourhost.com`", or with address and name "`Administrator admin@yourhost.com`").
+
+If no value is given (default), mail is sent with system default.
 
 ## PHPMailerSender
 
@@ -30,7 +34,7 @@ PHPMailerSender makes it possible to use external SMTP server, it can be configu
 			"host" => MAIL_SERVER_HOST,
 			"username" => USERNAME,
 			"password" => PASSWORD,
-			"secure" => "tls"/"ssl"
+			"secure" => SECURE_METHOD // optional, values "tls" or "ssl"
 		)
 		...
 	);
