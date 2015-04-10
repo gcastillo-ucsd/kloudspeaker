@@ -18,7 +18,7 @@ Client side needs the plugin registered in the application initialization:
     </script>
 
 
-## Server
+## Backend
 Plugin is registered with name "`FileViewerEditor`".
 
 File viewer has following settings:
@@ -33,15 +33,15 @@ For example:
 	$CONFIGURATION = array(
 		...,
 		"plugins" => array(
-			"**FileViewerEditor**" => array(
-				"**viewers**" => array(
+			"FileViewerEditor" => array(
+				"viewers" => array(
 					"Image" => array("gif", "png", "jpg"),
 					"TextFile" => array("txt", "php", "html")
 				),
-				"**previewers**" => array(
+				"previewers" => array(
 					"Image" => array("gif", "png", "jpg")
 				),
-				"**editors**" => array(
+				"editors" => array(
 					"TextFile" => array("txt")
 				)
 			)
