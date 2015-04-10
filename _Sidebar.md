@@ -19,6 +19,7 @@
  * [[Notificator|Notificator-plugin]]
  * [[Event logging|Event-logging-plugin]]
  * [[Lost password|Lost-password-plugin]]
+ * [[Item collection|Item-collection-plugin]]
 * [[Permissions|Permissions]]
 * [[External interface|External-interface]]
 * Customizations
