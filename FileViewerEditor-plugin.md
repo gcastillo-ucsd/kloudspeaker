@@ -26,22 +26,22 @@ File viewer has following settings:
 * "previewers"
 * "editors"
 
-Both list viewer/previewer plugins and file extensions they handle, in format of `[NAME] => [FILE_TYPE_LIST]`.
+Each list viewer/previewer/editor and file extensions they handle, in format of `[NAME] => [FILE_TYPE_LIST]`.
 
 For example:
 
 	$CONFIGURATION = array(
 		...,
 		"plugins" => array(
-			"FileViewerEditor" => array(
-				"viewers" => array(
+			"**FileViewerEditor**" => array(
+				"**viewers**" => array(
 					"Image" => array("gif", "png", "jpg"),
 					"TextFile" => array("txt", "php", "html")
 				),
-				"previewers" => array(
+				"**previewers**" => array(
 					"Image" => array("gif", "png", "jpg")
 				),
-				"editors" => array(
+				"**editors**" => array(
 					"TextFile" => array("txt")
 				)
 			)
