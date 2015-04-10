@@ -87,7 +87,7 @@ Configuration:
 
 File viewer plugins are installed by unzipping installation package to "`backend/plugin/FileViewerEditor/viewers`".
 
-Additional viewers can be found from Downloads section with label "Viewer" [http://code.google.com/p/kloudspeaker/downloads/list?can=2&q=Viewer&colspec=Filename+Summary+Uploaded+Size+DownloadCount]
+Additional viewers can be found from [Downloads](http://www.kloudspeaker.com/downloads.php)
 
 ### TextFile
 
@@ -133,7 +133,7 @@ Configuration:
 
 File previewer plugins are installed by unzipping installation package to "`backend/plugin/FileViewer/previewers`".
 
-Additional previewers can be found from Downloads section with label "Previewer" [http://code.google.com/p/kloudspeaker/downloads/list?can=2&q=Previewer&colspec=Filename+Summary+Uploaded+Size+DownloadCount]
+Additional previewers can be found from [Downloads](http://www.kloudspeaker.com/downloads.php)
 
 # Editors
 
@@ -152,7 +152,7 @@ Configuration:
 
 File editor plugins are installed by unzipping installation package to "`backend/plugin/FileViewerEditor/editors`".
 
-Additional editors can be found from Downloads section with label "Editor" [http://code.google.com/p/kloudspeaker/downloads/list?can=2&q=Editor&colspec=Filename+Summary+Uploaded+Size+DownloadCount]
+Additional editors can be found from [Downloads](http://www.kloudspeaker.com/downloads.php)
 
 ### CKEditor
 
