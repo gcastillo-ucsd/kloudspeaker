@@ -16,6 +16,7 @@
  * [[Comments|Comments-plugin]]
  * [[Archiver|Archiver-plugin]]
  * [[Item details|Item-details-plugin]]
+ * [[Notificator|Notificator-plugin]]
 * [[Permissions|Permissions]]
 * [[External interface|External-interface]]
 * Customizations
