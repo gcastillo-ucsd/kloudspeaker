@@ -15,6 +15,7 @@
  * [[Registration|Registration-plugin]]
  * [[Comments|Comments-plugin]]
  * [[Archiver|Archiver-plugin]]
+ * [[Item details|Item-details-plugin]]
 * [[Permissions|Permissions]]
 * [[External interface|External-interface]]
 * Customizations
