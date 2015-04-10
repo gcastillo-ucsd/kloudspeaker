@@ -18,7 +18,7 @@ And following into client settings:
 
 
 	<script type="text/javascript">
-		mollify.App.init({
+		kloudspeaker.App.init({
 			...
 			}, [
 				new kloudspeaker.plugin.ItemDetailsPlugin({})
