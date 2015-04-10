@@ -14,7 +14,7 @@ Configure plugin by adding following into configuration.php:
 
 Notificator plugin does not have any parameters.
 
-Notificator requires mail [[notifications enabled|Mail]]
+Notificator requires [[mail notifications enabled|Mail]]
 
 ## Installation
 
