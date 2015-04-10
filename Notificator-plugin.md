@@ -8,7 +8,8 @@ Configure plugin by adding following into configuration.php:
 	$CONFIGURATION = array(
 		...,
 		"plugins" => array(
-			"Notificator" => array()
+			"Notificator" => array(),
+			...
 		)
 	);
 
@@ -42,7 +43,7 @@ For filesystem events, following variables are available:
 Following applies only to rename, copy and move events:
   * %to_item_id% Id of the target file or folder
   * %to_item_name% Name of the target file or folder
-  * %to_item_path% Mollify path of the target file or folder
+  * %to_item_path% Kloudspeaker path of the target file or folder
   * %to_item_internal_path% Internal path of the target file or folder (for local filesystem this the actual location in the filesystem)
   * %to_root_name% Name of the target published folder
 
