@@ -1,4 +1,4 @@
-### 2.6.8 (and History 1.1 & Quota 1.2)
+### 2.6.8 (+ History 1.1 & Quota 1.2)
 
 Released 2015/4/11
 
