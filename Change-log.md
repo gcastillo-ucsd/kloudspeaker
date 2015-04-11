@@ -3,7 +3,8 @@
 Released 2015/4/11
 
 * Added new feature: https://github.com/sjarvela/kloudspeaker/issues/5
-* Fixed issue: https://github.com/sjarvela/kloudspeaker/issues/8
+* Added enhancement: https://github.com/sjarvela/mollify/issues/15 (with History 1.1)
+* Fixed issue: https://github.com/sjarvela/kloudspeaker/issues/8 (with Quota 1.2)
 * Fixed issue: https://github.com/sjarvela/mollify/issues/2
 * Fixed issue: https://github.com/sjarvela/mollify/issues/9
 
