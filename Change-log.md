@@ -1,3 +1,12 @@
+### 2.6.8
+
+Released 2015/4/11
+
+* Added new feature: https://github.com/sjarvela/kloudspeaker/issues/5
+* Fixed issue: https://github.com/sjarvela/kloudspeaker/issues/8
+* Fixed issue: https://github.com/sjarvela/mollify/issues/2
+* Fixed issue: https://github.com/sjarvela/mollify/issues/9
+
 ### Quota plugin 1.1
 
 Released 2015/3/30
