@@ -37,6 +37,7 @@ Following settings are available in backend configuration:
 		"ldap_bind_pw" => NULL,
 
 		"convert_filenames" => FALSE,					// convert filesystem filenames
+		"ignored_items" => FALSE,					// ignored filesystem items
 		"no_dev_urandom" => FALSE,					// disable PHPPass lib /dev/urandom
 
 		"enable_change_password" => TRUE,				// enable change password
@@ -153,6 +154,17 @@ Otherwise the OS charset has to be defined here:
 		"convert_filenames" => "CP1252"
 	);
 
+## Ignored filesystem items (`ignored_items`)
+
+With setting `ignored_items`, you can specify files/folders that are ignored (=excluded), and will not be listed in file view.
+
+The value is array of regex patterns that will be matched against the item full path.
+
+	$CONFIGURATION = array(
+		"ignored_items" => array("/\.pdf$/i")
+	);
+
+This example would ignore all PDF -files anywhere. For regex syntax in PHP, see http://php.net/manual/en/pcre.pattern.php
 
 ## Enable folder protection (`enable_folder_protection`)
 
