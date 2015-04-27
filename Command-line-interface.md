@@ -21,3 +21,26 @@ Requires attributes `src` for local file to be uploaded and `target` for Kloudsp
 Performs file copy, differs from command `upload` so that file is added in the background without triggering events or action handlers.
 
 Requires attributes `src` for local file to be uploaded and `target` for Kloudspeaker location where file is uploaded
+
+## Custom commands
+
+Plugins can register own commands like this:
+
+	class MyPlugin extends PluginBase {
+		public function setup() {
+			$this->env->commands()->register("my-command", $this);
+		}
+	}
+
+In register call:
+* First parameter is command name, use unique names that don't collide (prefix with plugin name etc)
+* Second parameter is command handler
+
+
+Possible command handler options are:
+* Object reference. With this option, it is assumed that the object has function "execute" which will be called.
+* Function name as string. With this option, global function with given name is executed.
+
+In all cases, the execute is called with two parameters:
+1. Command name (string)
+2. Invocation options (array of name/value pairs from the command line)
