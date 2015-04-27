@@ -28,7 +28,7 @@ Plugins can register own commands like this:
 
 	class MyPlugin extends PluginBase {
 		public function setup() {
-			$this->env->commands()->register("my-command", $this);
+			$this->env->commands()->register("my-plugin:some-command", $this);
 		}
 	}
 
