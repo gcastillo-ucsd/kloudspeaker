@@ -23,6 +23,7 @@
  * [[Trash bin|Trash-bin-plugin]]
 * [[Permissions|Permissions]]
 * [[External interface|External-interface]]
+* [[Command line interface|Command-line-interface]]
 * Customizations
  * [[Resources|Customizing-resources]]
  * [[Client resource map|Client-resource-map]]
