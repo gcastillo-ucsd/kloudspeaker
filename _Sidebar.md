@@ -20,6 +20,7 @@
  * [[Event logging|Event-logging-plugin]]
  * [[Lost password|Lost-password-plugin]]
  * [[Item collection|Item-collection-plugin]]
+ * [[Trash bin|Trash-bin-plugin]]
 * [[Permissions|Permissions]]
 * [[External interface|External-interface]]
 * Customizations
