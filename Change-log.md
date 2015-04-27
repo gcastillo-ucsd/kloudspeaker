@@ -7,7 +7,7 @@ Released 2015/4/27
 * Added new feature: https://github.com/sjarvela/kloudspeaker/issues/21
 * Fixed: https://github.com/sjarvela/kloudspeaker/issues/14
 * Added new beta plugin [TrashBin](https://github.com/sjarvela/kloudspeaker/wiki/Trash-bin-plugin)
-* Added initial support for command line tool
+* Added initial support for [command line interface](https://github.com/sjarvela/kloudspeaker/wiki/Command-line-interface)
 
 ### 2.6.8 (+ History 1.1 & Quota 1.2)
 
