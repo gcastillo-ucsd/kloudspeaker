@@ -1,8 +1,8 @@
-Trash bin plugin can provide two different functionality modes:
+Trash bin plugin acts differently based on whether _trash bin storage_ is enabled:
 
-1. At minimum, plugin can add visual trash can into the file view, where files or folders can be drag&dropped for deletion. In this mode, files/folders are deleted permanently, the trash bin only allows easier and faster way to do it.
+1. Without _trash bin storage_, plugin only displays visual trash can in the file view, where files or folders can be drag&dropped for deletion. In this mode, files/folders are deleted permanently just like without the plugin, the trash bin only allows easier and faster way to do it.
 
-2. When configuring trash bin folder in configuration, the plugin will also intercept delete actions and store deleted files/folders into trash bin folder. Contents of the trash bin can then be viewed, and files/folders can be restored or deleted permanently.
+2. With _trash bin storage_, the plugin will intercept delete actions and store deleted files/folders into separate trash bin folder. Contents of the trash bin can then be viewed, and files/folders can be restored or deleted permanently.
 
 **NOTE** Trash bin plugin is beta release, and does not yet have all functionality. For example, integration with plugins like Share or Quota is not yet added.
 
