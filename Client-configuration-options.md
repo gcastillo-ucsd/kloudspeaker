@@ -109,7 +109,7 @@ Action "create empty file" is not shown by default. With this setting, it can be
 
 ### Icon view thumbnails (`icon-view-thumbnails`)
 
-With this option, icon view can display supported images (gif, png, jpg, jpeg) with thumbnail. Requires thumbnail feature enabled in backend [https://code.google.com/p/kloudspeaker/wiki/BackendSettings#Enable_thumbnails_(_enable_thumbnails_)]
+With this option, icon view can display supported images (gif, png, jpg, jpeg) with thumbnail. Requires thumbnail feature enabled in backend [https://github.com/sjarvela/kloudspeaker/wiki/Backend-configuration-options#enable-thumbnails-enable_thumbnails]
 
 ### Default view mode (`default-view-mode`)
 
