@@ -4,6 +4,8 @@ Trash bin plugin can provide two different functionality modes:
 
 2. When configuring trash bin folder in configuration, the plugin will also intercept delete actions and store deleted files/folders into trash bin folder. Contents of the trash bin can then be viewed, and files/folders can be restored or deleted permanently.
 
+**NOTE** Trash bin plugin is beta release, and does not yet have all functionality. For example, integration with plugins like Share or Quota is not yet added.
+
 ## Configuration
 
 At minimum, plugin is only registered in the configuration
