@@ -21,6 +21,7 @@
  * [[Lost password|Lost-password-plugin]]
  * [[Item collection|Item-collection-plugin]]
  * [[Trash bin|Trash-bin-plugin]]
+ * [[WebDAV|WebDAV-plugin]]
 * [[Permissions|Permissions]]
 * [[External interface|External-interface]]
 * [[Command line interface|Command-line-interface]]
