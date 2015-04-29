@@ -18,7 +18,7 @@ If this does not apply your server, or it is disabled, the url becomes "`http[s]
 
 Modify "index.php" and update variable `$BASE_URI` according to your configuration. The value is the access url without protocol or host ip.
 
-For example, if Kloudspeaker backend is located at "http://host/kloudspeaker/backend", the base uri should be "`/kloudspeaker/backend/dav/`" (assuming rewrite applies, "/kloudspeaker/backend/dav/index.php/" if not).
+For example, if Kloudspeaker backend is located at "`http://host/kloudspeaker/backend`", the base uri should be "`/kloudspeaker/backend/dav/`" (assuming rewrite applies, "`/kloudspeaker/backend/dav/index.php/`" if not).
 	
 If htaccess rules are not available, you can also use Apache alias. For example following alias in Apache configuration will do the same:
 
@@ -34,8 +34,10 @@ Currently only basic auth is possible.
 
 ### Locking
 
-By default, dav is set up with locking support. Some clients don't require this (see http://code.google.com/p/sabredav/), and can be disabled by setting "$ENABLE_LOCKING = FALSE;" in index.php
+By default, dav is set up with locking support. Some clients don't require this (see http://code.google.com/p/sabredav/), and can be disabled by setting "`$ENABLE_LOCKING = FALSE;`" in index.php
 
 ### Temporary file filter
 
-By default, dav is set up to filter temporary files, because many clients create garbage files on your WebDAV share (see http://code.google.com/p/sabredav/wiki/TemporaryFileFilter). This can be disabled by setting "$ENABLE_TEMPORARY_FILE_FILTER = FALSE;" in index.php
+By default, dav is set up to filter temporary files, because many clients create garbage files on your WebDAV share (see http://code.google.com/p/sabredav/wiki/TemporaryFileFilter).
+
+This can be disabled by setting "`$ENABLE_TEMPORARY_FILE_FILTER = FALSE;`" in index.php
