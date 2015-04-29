@@ -4,13 +4,13 @@ WebDAV plugin is based on SabreDAV framework from Rooftop Solutions (http://code
 
 ## Installation
 
-	Copy folder "dav" under Kloudspeaker backend folder, and continue with configuration.
+Copy folder "dav" under Kloudspeaker backend folder, and continue with configuration.
 
 ## Configuration
 
 ### WebDAV client URL
 
-Default URL for accessing files via WebDAV client is "http[s]://[host_ip]/[kloudspeaker_backend_path]/dav/".
+Default URL for accessing files via WebDAV client is "`http[s]://[host_ip]/[kloudspeaker_backend_path]/dav/`".
 
 In the installation package, there is a rewrite rule in file ".htaccess" which applies only to Apache web servers.
 
