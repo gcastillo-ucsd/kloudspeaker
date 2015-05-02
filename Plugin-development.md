@@ -30,3 +30,35 @@ The plugin itself is expected to be a javascript object with at least variable `
     };
 
 For other options in JavaScript plugins, see JS plugin API.
+
+## Backend plugins
+
+Backend plugins are registered in configuration.php
+
+	<?php
+		$CONFIGURATION = array(
+			"plugins" => array(
+				"CustomPlugin" => array()
+			)
+		)
+	?>
+
+By default, Kloudspeaker expects plugins to be found under folder "backend/plugin".
+
+In this example, plugin "CustomPlugin" is expected to be found at "backend/plugin/CustomPlugin". Under this folder, there should be a class "CustomPlugin.plugin.class.php" (extending class "PluginBase") that is loaded automatically.
+
+	<?php
+	class CustomPlugin extends PluginBase {
+		public function setup() {
+			// plugin setup
+		}
+
+		public function __toString() {
+			return "CustomPlugin";
+		}
+	}
+	?>
+
+For other options in backend plugins, see backend plugin API.
+
+**Note!** It is recommended to create custom plugins in separate location by using [customization folder](https://github.com/sjarvela/kloudspeaker/wiki/Customizing-resources#plugins). This makes Kloudspeaker updates easier, when custom plugins are not overwritten.
