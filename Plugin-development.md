@@ -13,9 +13,9 @@ Client plugins are registered in index.html
             kloudspeaker.App.init({
                 ...
             },
-            plugins: {
+            [
                 new CustomPlugin()
-            }
+            ]
         });
     </script>
 
@@ -36,12 +36,12 @@ or with simple plugins just use plain javascript objects
             kloudspeaker.App.init({
                 ...
             },
-            plugins: {
+            [
                 {
                     id: "custom-plugin",
                     ...
                 }
-            }
+            ]
         });
     </script>
 
@@ -49,13 +49,36 @@ At minimum, registered plugin object has to be define plugin id.
 
 Other plugin options:
 * `initialize`: function invoked when system is initialized
+* `backendPluginId`: plugin identifier used in backend plugin (needs to be defined only if not same as client)
 * `resources`: resources plugin requires to be loaded
 * `configViewHandler`: object registered to handle config view related actions and content
 * `fileViewHandler`: object registered to handle file view related actions and content
 * `itemContextHandler`: object registered to handle item context content
 * `itemCollectionHandler`: object registered to handle item collection actions
 
+For example:
+    var CustomPlugin = function() {
+        var that = this;
 
+        this.initialize = function() {
+            // do plugin initialization
+        };
+
+        return {
+            id: "custom-plugin",
+            backendPluginId: "CustomPlugin",
+            initialize: that.initialize,
+            resources: {
+                css: true,
+                texts: true
+            },
+            fileViewHandler: {
+                onInit: function(fileview) {},
+                onActivate: function($mainviewElement, mainviewHandle) {},
+                onDeactivate: function($mainviewElement, mainviewHandle) {}
+            }
+        }
+    };
 
 ## Backend plugins
 
