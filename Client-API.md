@@ -1,4 +1,4 @@
-Kloudspeaker registers a global object `kloudspeaker`, which provides various services.
+In client JavaScript, Kloudspeaker registers a global object `kloudspeaker` which provides various services.
 
 # Core
 
