@@ -28,4 +28,7 @@
 * Customizations
  * [[Resources|Customizing-resources]]
  * [[Client resource map|Client-resource-map]]
+* Development
+ * [[Plugin|Plugin-development]]
+ * [[Client API|Client-API]]
 * [[Change log|Change-log]]
