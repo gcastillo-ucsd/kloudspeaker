@@ -29,7 +29,33 @@ The plugin itself is expected to be a javascript object with at least variable `
         }
     };
 
-For other options in JavaScript plugins, see JS plugin API.
+or with simple plugins just use plain javascript objects
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            kloudspeaker.App.init({
+                ...
+            },
+            plugins: {
+                {
+                    id: "custom-plugin",
+                    ...
+                }
+            }
+        });
+    </script>
+
+At minimum, registered plugin object has to be define plugin id.
+
+Other plugin options:
+* `initialize`: function invoked when system is initialized
+* `resources`: resources plugin requires to be loaded
+* `configViewHandler`: object registered to handle config view related actions and content
+* `fileViewHandler`: object registered to handle file view related actions and content
+* `itemContextHandler`: object registered to handle item context content
+* `itemCollectionHandler`: object registered to handle item collection actions
+
+
 
 ## Backend plugins
 
@@ -62,3 +88,44 @@ In this example, plugin "CustomPlugin" is expected to be found at "backend/plugi
 For other options in backend plugins, see backend plugin API.
 
 **Note!** It is recommended to create custom plugins in separate location by using [customization folder](https://github.com/sjarvela/kloudspeaker/wiki/Customizing-resources#plugins). This makes Kloudspeaker updates easier, when custom plugins are not overwritten.
+
+## Packages with client and backend plugins
+
+It is possible to create packages that contain both, client and backend plugins.
+
+By overwriting backend plugin class PluginBase function getClientPlugin, it can define the javascript file that is automatically loaded when client is initialized.
+
+For example
+
+	<?php
+	class CustomPlugin extends PluginBase {
+		public function setup() {
+			// plugin setup
+		}
+
+		public function getClientPlugin() {
+			return "client/plugin.js";
+		}
+
+		public function __toString() {
+			return "CustomPlugin";
+		}
+	}
+	?>
+
+This tells Kloudspeaker that plugin package contains folder "client" containing "plugin.js" which is loaded automatically.
+
+In this file, there should be client plugin registration like this:
+
+    ! function($, kloudspeaker) {
+        "use strict"; // jshint ;_;
+
+        var CustomPlugin = function() {
+            return {
+                id: "custom-plugin",
+                ...
+            };
+        }
+
+        kloudspeaker.plugins.register(new CustomPlugin());
+    }(window.jQuery, window.kloudspeaker);
