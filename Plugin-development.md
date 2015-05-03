@@ -57,6 +57,7 @@ Other plugin options:
 * `itemCollectionHandler`: object registered to handle item collection actions
 
 For example:
+
     var CustomPlugin = function() {
         var that = this;
 
