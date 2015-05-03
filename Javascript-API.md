@@ -1,5 +1,7 @@
 Kloudspeaker registers a global object `kloudspeaker`, which provides various services.
 
+# Core
+
 ## Request
 
 Current page request can be retrieved from `kloudspeaker.request`. It provides following functions:
@@ -91,3 +93,23 @@ Kloudspeaker filesystem operations can be done using `kloudspeaker.filesystem`. 
 * `rename(item, name)`
 * `del(item|items)`
 * `createFolder(parent, name)`
+
+# UI
+
+## Templates
+
+Kloudspeaker uses JQuery Templates engine (no longer maintained, documentation http://web.archive.org/web/20121014080309/http://api.jquery.com/jquery.tmpl/) for creating UI.
+
+Templates are declared in HTML:
+
+	<script id="my-tmpl" type="text/x-jquery-tmpl">
+		<div class="my-element">
+			${message}
+		</div>
+	</script>
+
+Template element can be created using `kloudspeaker.dom.template`, for example:
+
+	var $e = kloudspeaker.dom.template("my-tmpl", data, opt);
+
+The result object is jQuery DOM object that can be used like any other jQuery DOM object, for example append to existing DOM object.
