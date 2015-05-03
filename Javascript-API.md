@@ -70,3 +70,24 @@ Events can be sent with
     kloudspeaker.events.dispatch(eventId, payload);
 
 where `eventId` is string for event identifier and `payload` is event object. For example, session start event payload object is the session object.
+
+## Filesystem
+
+Kloudspeaker filesystem operations can be done using `kloudspeaker.filesystem`. It provides following functions:
+
+* `getDownloadUrl(item)`: get download url for provided item
+* `getUploadUrl(folder)`: get upload url for provided folder
+* `itemDetails(item)`: get item details for provided item
+* `folderInfo(folder)`: get folder info for provided folder
+* `findFolder`
+* `hasPermission(item, name, required)`
+* `items(parent, files)`
+* `createEmptyFile(parent, name)`
+* `copy(item|items, to)`
+* `copyHere(item, name)`
+* `canCopyTo(item, to)`
+* `move(item|items, to)`
+* `canMoveTo(item, to)`
+* `rename(item, name)`
+* `del(item|items)`
+* `createFolder(parent, name)`
