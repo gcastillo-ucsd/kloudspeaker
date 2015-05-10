@@ -1,3 +1,12 @@
+### 2.6.10 (+ History 1.3 & Quota 1.3)
+
+Released 2015/5/10
+
+* Trash bin support for Quota
+* Quota recalculate command changed into command line interface action
+* New development API: support for UI binding
+* Fixes and improvements
+
 ### 2.6.9 (+ History 1.2)
 
 Released 2015/4/27
