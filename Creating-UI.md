@@ -6,7 +6,7 @@ TODO
 
 ## UI binding
 
-Kloudspeaker supports UI binding using KnockoutJS library. It allows creating UI that is bound to JavaScript model, automatically updating when either UI or model changes.
+Kloudspeaker supports UI binding using [KnockoutJS](http://knockoutjs.com/) library. It allows creating UI that is bound to JavaScript model, automatically updating when either UI or model changes.
 
 Bound UI API is under development, and is subject to change.
 
@@ -37,11 +37,6 @@ And model definition any JS object:
         this.onAttach = function() {
             // called when UI is bound
             that.name(item.name);
-        };
-
-        this.onSave = function() {
-            // handle saving
-            return true;
         };
     };
 
