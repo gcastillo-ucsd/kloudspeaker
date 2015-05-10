@@ -30,5 +30,6 @@
  * [[Client resource map|Client-resource-map]]
 * Development
  * [[Plugin|Plugin-development]]
+ * [[Creating UI|Creating-UI]]
  * [[Client API|Client-API]]
 * [[Change log|Change-log]]
