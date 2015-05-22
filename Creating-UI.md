@@ -1,55 +1,100 @@
-Using Kloudspeaker JavaScript API, it is possible to create UI with two methods: templates and UI binding.
+Kloudspeaker uses [Durandal](http://durandaljs.com/) for creating views and binding them with model objects.
 
-## Templates
+This allows creating UI that have both, view and model, defined with modules. Views are HTML files with all Knockout extensions available, and models JavaScript module classes with data.
 
-TODO
+# View and model binding
 
-## UI binding
+For details on creating views and modules, see http://durandaljs.com/documentation/Creating-A-View.html
 
-Kloudspeaker supports UI binding using [KnockoutJS](http://knockoutjs.com/) library. It allows creating UI that is bound to JavaScript model, automatically updating when either UI or model changes.
+# Using views and models
 
-Bound UI API is under development, and is subject to change.
+## Full views
 
-For now, dialogs can use bound UI with following API:
+Using module "kloudspeaker/ui/views" it is possible to register full application views.
 
-    var model = new MyDialogModel(item);
-    kloudspeaker.ui.dialogs.custom({
-        title: 'My dialog name',
-        template: ["my-dialog-tmpl", {
-            title: "Some parameter for template"
-        }],
-        model: model,
+    views.registerView("myview", function(rqParts, urlParams) { ... });
+
+This will register view handler for view id "myview". When browser opens URL "http://yoursite/kloudspeaker?v=myview", this function is called.
+
+Param rqParts is array with view id parts, for example if view opened is "?v=myview/subview", the array is ["myview", "subview"].
+
+Param urlParams contains all parameters in the request.
+
+The function can return
+* false if no view should be opened
+* object with model (and optionally view) for UI composition
+
+For example:
+
+    views.registerView("myview", function(rqParts, urlParams) {
+        return {
+            model: 'my-package/myview'
+        };
+    });
+
+This will load module 'my-package/myview' as the view and model: for a view, it loads "my-package/myview.html" as a view, and "my-package/myview.js" as model.
+
+It is possible to define separate view module:
+
+    views.registerView("myview", function(rqParts, urlParams) {
+        return {
+            model: 'my-package/myview',
+            view: 'my-package/templates/myview'
+        };
+    });
+
+## Dialogs
+
+Creating a dialog with view & model, use Kloudspeaker module 'kloudspeaker/ui/dialogs':
+
+    dialogs.custom({
+        title: 'My Dialog Title',
+        model: 'my-package/module',
         buttons: [{
             id: "no",
             "title": kloudspeaker.ui.texts.get('dialogClose')
-        }],
-        "on-button": function(btn, d) {
-            d.close();
+        }]
+    });
+
+This will load module 'my-package/module' as the view and model: for a view, it loads "my-package/module.html" as a view, and "my-package/module.js" as model.
+
+It is possible to define separate view 
+
+    dialogs.custom({
+        title: 'My Dialog Title',
+        view: 'my-package/templates/module',
+        model: 'my-package/module',
+        buttons: [{
+            id: "no",
+            "title": kloudspeaker.ui.texts.get('dialogClose')
+        }]
+    });
+
+To pass data into model module, use array syntax:
+
+        model: ['my-package/module', someObj]
+
+And in model module, define function "activate" which is called when model is activated, with the someObj as parameter.
+
+    define([deps], function(...) {
+        return {
+            activate: function(someObj) {
+                // initialize model
+            }
         }
     });
 
-And model definition any JS object:
+## Config views
 
-    var MyDialogModel = function(item) {
-        var that = this;
-        this.name = ko.observable();
+TODO
 
-        this.onAttach = function() {
-            // called when UI is bound
-            that.name(item.name);
-        };
-    };
+## Manual composition
 
-And UI template
+If it is needed to use UI composition manually, it is possible to do with module kloudspeaker/ui:
 
-    <script id="my-dialog-tmpl" type="text/x-jquery-tmpl">
-        <div class="test">
-            My dialog: ${title}<br/>
-            
-            Name: <span data-bind="text: name"></span><br/>
+    ui.viewmodel(view, model, $target)
 
-            <input data-bind="value: name" /><br/>
-        </div>
-    </script>
-
-This example shows how field "name" is bound to the model, and editing the value automatically updates the field in UI.
+where
+* view defines the view to be bound (can be module id, template id or actual DOM object)
+* model defines the model to be bound (can be module id or actual model object)
+* $target is the DOM object where view is inserted into
