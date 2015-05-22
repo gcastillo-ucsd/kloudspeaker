@@ -29,6 +29,7 @@
  * [[Resources|Customizing-resources]]
  * [[Client resource map|Client-resource-map]]
 * Development
+ * [[Client modules|Client-modules]]
  * [[Plugin|Plugin-development]]
  * [[Creating UI|Creating-UI]]
  * [[Client API|Client-API]]
