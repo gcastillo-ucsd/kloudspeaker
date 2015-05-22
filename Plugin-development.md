@@ -65,7 +65,7 @@ For other options in backend plugins, see backend plugin API.
 
 It is possible to create packages that contain both, client and backend plugins.
 
-By overwriting backend plugin class PluginBase function getClientPlugin, it can define the javascript file that is automatically loaded when client is initialized.
+By overwriting backend plugin class PluginBase function getClientModuleId, it can define the client module.
 
 For example
 
@@ -85,9 +85,11 @@ For example
 	}
 	?>
 
-This tells Kloudspeaker that plugin package contains client module, and it will be exposed with package "custom/plugin", and is mapped into folder "client" under the plugin folder.
+This tells Kloudspeaker that plugin package contains client module, and it will be exposed with package name "custom/plugin", and is mapped into folder "client" under the plugin folder.
 
-When application is started, it automatically loads main module from this package, ie. "client/main.js". This module should do any plugin initialization. For an example, see [trash bin plugin](https://github.com/sjarvela/kloudspeaker/tree/master/backend/plugin/TrashBin).
+When application is started, it automatically loads main module from this package, ie. "client/main.js". This module should do any plugin initialization etc.
+
+For an example how to package client module in backend plugin, see [Trash bin plugin](https://github.com/sjarvela/kloudspeaker/tree/master/backend/plugin/TrashBin).
 
 Using module definition, it is now possible to publish any additional modules and/or files, and refer to them using the package name. For example:
 
