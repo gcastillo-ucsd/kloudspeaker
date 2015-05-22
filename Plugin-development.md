@@ -6,80 +6,28 @@ Both can be registered separately, but it is also possible to create a backend p
 
 ## Client plugins
 
-Client plugins are registered in index.html
+Define custom module to be loaded as explained in https://github.com/sjarvela/kloudspeaker/wiki/Client-modules.
 
-    <script type="text/javascript">
-        $(document).ready(function() {
-            kloudspeaker.App.init({
+During the module initialization, register plugin like this:
+
+    define(['kloudspeaker/plugins'], function(plugins) {
+        plugins.register({
+            id: "custom-plugin",
+            initialize: function() {
                 ...
-            },
-            [
-                new CustomPlugin()
-            ]
+            }
         });
-    </script>
-
-The plugin itself is expected to be a javascript object with at least variable `id` defining unique identifier for the plugin.
-
-    var CustomPlugin = function() {
-        var that = this;
-
-        return {
-            id: "custom-plugin"
-        }
-    };
-
-or with simple plugins just use plain javascript objects
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-            kloudspeaker.App.init({
-                ...
-            },
-            [
-                {
-                    id: "custom-plugin",
-                    ...
-                }
-            ]
-        });
-    </script>
-
-At minimum, registered plugin object has to be define plugin id.
+    });
 
 Other plugin options:
 * `initialize`: function invoked when system is initialized
 * `backendPluginId`: plugin identifier used in backend plugin (needs to be defined only if not same as client)
-* `resources`: resources plugin requires to be loaded
+* `resources`: resources plugin requires to be loaded (relevant only when plugin has backend)
 * `configViewHandler`: object registered to handle config view related actions and content
 * `fileViewHandler`: object registered to handle file view related actions and content
 * `itemContextHandler`: object registered to handle item context content
 * `itemCollectionHandler`: object registered to handle item collection actions
 
-For example:
-
-    var CustomPlugin = function() {
-        var that = this;
-
-        this.initialize = function() {
-            // do plugin initialization
-        };
-
-        return {
-            id: "custom-plugin",
-            backendPluginId: "CustomPlugin",
-            initialize: that.initialize,
-            resources: {
-                css: true,
-                texts: true
-            },
-            fileViewHandler: {
-                onInit: function(fileview) {},
-                onActivate: function($mainviewElement, mainviewHandle) {},
-                onDeactivate: function($mainviewElement, mainviewHandle) {}
-            }
-        }
-    };
 
 ## Backend plugins
 
@@ -127,8 +75,8 @@ For example
 			// plugin setup
 		}
 
-		public function getClientPlugin() {
-			return "client/plugin.js";
+		public function getClientModuleId() {
+			return "custom/plugin";
 		}
 
 		public function __toString() {
@@ -137,19 +85,14 @@ For example
 	}
 	?>
 
-This tells Kloudspeaker that plugin package contains folder "client" containing "plugin.js" which is loaded automatically.
+This tells Kloudspeaker that plugin package contains client module, and it will be exposed with package "custom/plugin", and is mapped into folder "client" under the plugin folder.
 
-In this file, there should be client plugin registration like this:
+When application is started, it automatically loads main module from this package, ie. "client/main.js". This module should do any plugin initialization. For an example, see [trash bin plugin](https://github.com/sjarvela/kloudspeaker/tree/master/backend/plugin/TrashBin).
 
-    ! function($, kloudspeaker) {
-        "use strict"; // jshint ;_;
+Using module definition, it is now possible to publish any additional modules and/or files, and refer to them using the package name. For example:
 
-        var CustomPlugin = function() {
-            return {
-                id: "custom-plugin",
-                ...
-            };
-        }
+	define(['kloudspeaker/plugins', 'custom/plugin/some/module'], function(plugins, someModule) {
+		//use someModule
+	});
 
-        kloudspeaker.plugins.register(new CustomPlugin());
-    }(window.jQuery, window.kloudspeaker);
+This will load a module called "some/module" from the plugin package "custom/plugin" automatically, and it will be resolved into "CustomPlugin/client/some/module.js".
