@@ -1,19 +1,28 @@
-In client JavaScript, Kloudspeaker registers a global object `kloudspeaker` which provides various services.
+Kloudspeaker uses [AMD with require.js](http://requirejs.org/docs/whyamd.html), and publishes different services and interfaces via modules that can be imported into other modules like plugins.
+
+For example, to get Kloudspeaker service in a module, it can be imported like this:
+
+    define(['kloudspeaker/service'], function(service) {
+        return function() {        
+            // somewhere in code
+            service.post('your/service', { your: data }).done(function() { ... });
+        };
+    });
 
 # Core
 
-## Request
+## kloudspeaker/request
 
-Current page request can be retrieved from `kloudspeaker.request`. It provides following functions:
+This module represents current page request, and it provides following functions:
 
 * `getParam(name)`: function for resolving request parameter
 * `getParams`: function for getting all request params
 * `getBaseUrl`: function for resolving base url for the request (URL before params and view path)
 * `getPageUrl`: function for resolving current page url (URL before params)
 
-## Service
+## kloudspeaker/service
 
-Kloudspeaker REST API (backend services) can be used with `kloudspeaker.service`. It provides function for all REST methods:
+Kloudspeaker REST API (backend services) can be used with service module. It provides function for all REST methods:
 
 * `get(url)`: method GET
 * `post(url, data)`: method POST with optional data
@@ -24,7 +33,7 @@ All functions return a promise object, which will resolve with the result return
 
 For example, success result can be handled like this:
 
-    kloudspeaker.service.post("my/service", {
+    service.post("my/service", {
         foo: bar
     }).done(function(r) {
         // process result
@@ -32,7 +41,7 @@ For example, success result can be handled like this:
 
 By default, all errors will trigger error dialog with system default error message. Any service caller can handle the error explicitly, and prevent default error message.
 
-    kloudspeaker.service.post("my/service", {
+    service.post("my/service", {
         foo: bar
     }).done(function(r) {
         // process result
@@ -41,9 +50,11 @@ By default, all errors will trigger error dialog with system default error messa
         // handle error
     });
 
-## Session
+## kloudspeaker/session
 
-Current session can be retrieved from `kloudspeaker.session`. It has following attributes:
+Current session can be retrieved from session module with function "get". This function returns the active session object, or false if no session is active.
+
+Session object has following attributes:
 
 * `id`: session id
 * `user`: session user (false if not logged in)
@@ -53,29 +64,31 @@ Current session can be retrieved from `kloudspeaker.session`. It has following a
 
 User object has following data:
 
-## Events
+## kloudspeaker/events
 
-Kloudspeaker events can be listened
+Events module provides methods for listening and sending application events.
 
-    kloudspeaker.events.addEventHandler(fn, eventId);
+Events can be listened
+
+    events.addEventHandler(fn, eventId);
 
 where `fn` is handler function (called with one parameter, event) and `eventId` string for event identifier.
 
 for example, to listen session start event
 
-    kloudspeaker.events.addEventHandler(function(e) {
+    events.addEventHandler(function(e) {
         // add event logic
     }, "session/start");
 
 Events can be sent with
 
-    kloudspeaker.events.dispatch(eventId, payload);
+    events.dispatch(eventId, payload);
 
 where `eventId` is string for event identifier and `payload` is event object. For example, session start event payload object is the session object.
 
-## Filesystem
+## kloudspeaker/filesystem
 
-Kloudspeaker filesystem operations can be done using `kloudspeaker.filesystem`. It provides following functions:
+Kloudspeaker filesystem operations can be done using filesystem module. It provides following functions:
 
 * `getDownloadUrl(item)`: get download url for provided item
 * `getUploadUrl(folder)`: get upload url for provided folder
@@ -96,7 +109,26 @@ Kloudspeaker filesystem operations can be done using `kloudspeaker.filesystem`. 
 
 # UI
 
-## Templates
+## kloudspeaker/ui/texts
+
+Texts module provides methods for getting localized strings.
+
+    texts.get(id, params)
+
+where id is text key (string) and params (optional) possible parameters in the text.
+
+For example
+
+    var t = texts.get('someTextKey');
+
+or
+
+    var t = texts.get('someTextKeyWithParams', ['firstParam', 'secondParam']);
+
+
+Texts are defined in localization files, and are loaded based on language defined.
+
+## Templates (deprecated)
 
 Kloudspeaker uses JQuery Templates engine (no longer maintained, documentation http://web.archive.org/web/20121014080309/http://api.jquery.com/jquery.tmpl/) for creating UI.
 
