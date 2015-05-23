@@ -1,10 +1,42 @@
 Kloudspeaker uses [Durandal](http://durandaljs.com/) for creating views and binding them with model objects.
 
-This allows creating UI that have both, view and model, defined with modules. Views are HTML files with all Knockout extensions available, and models JavaScript module classes with data.
+This allows creating UI that have both, view and model, defined with modules. Views can be preloaded templates or HTML files, and models JavaScript module classes with data. With [Knockout](http://knockoutjs.com/) binding tools, view and model can be tied together without coding the UI logic.
 
 # View and model binding
 
+View and model binding is done with observables, fields that can be observed for changes. If field is bound to input field, it is automatically updated if the value is changed in the model. And the same way, if user changes the value in input, the model is updated automatically.
+
+Example model:
+
+        var model = {
+            name: ko.observable('')
+        };
+        return {
+            activate: function(params) {
+                // retrieve data etc
+                model.name(params.name);
+            },
+            model: model,
+            onClick: function() {
+                alert(model.name());
+            }
+        };
+
+Example view:
+
+    <div>
+        <input type="text" data-bind="value: model.name" autofocus></input>
+        <span data-bind="text: model.name"></span>
+        <button data-bind="click: onClick">Click</button>
+    </div>
+
+In this example, model creates observable field "name", which is bound to input field. Second element, span, is also bound to same field, and is updated automatically if user changes the value.
+
+Clicking the button will trigger the function "onClick", which will show alert box with the name user gives.
+
 For details on creating views and modules, see http://durandaljs.com/documentation/Creating-A-View.html
+
+For binding tools, see http://knockoutjs.com/documentation/introduction.html
 
 # Using views and models
 
