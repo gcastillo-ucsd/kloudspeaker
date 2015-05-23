@@ -1,6 +1,6 @@
 Kloudspeaker uses [Durandal](http://durandaljs.com/) for creating views and binding them with model objects.
 
-Views can be preloaded templates or HTML files, and models JavaScript module classes with data. With [Knockout](http://knockoutjs.com/) binding tools, view and model can be tied together without coding the UI logic.
+Views can be preloaded templates or HTML files, and models JavaScript objects. With [Knockout](http://knockoutjs.com/) binding tools, view and model can be tied together without coding the UI logic.
 
 It is suggested to create both, view and model, as independent modules. See https://github.com/sjarvela/kloudspeaker/wiki/Client-modules
 
