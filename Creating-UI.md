@@ -133,7 +133,7 @@ To pass data into model module, use array syntax for model:
 
         ['my-package/plugin/config', someObj]
 
-When view is activated, model function "`activate`" is called. If there are data passed as parameter, they are passed as function params.
+When view is activated, model function "`activate`" is called. Any data given will be passed as function params.
 
     define([deps], function(...) {
         return {
@@ -142,3 +142,5 @@ When view is activated, model function "`activate`" is called. If there are data
             }
         }
     });
+
+For more details, see [Durandal documentation](http://durandaljs.com/documentation/Creating-A-View.html)
