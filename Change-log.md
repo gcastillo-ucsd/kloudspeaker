@@ -7,6 +7,9 @@ Technical release, adds support for AMD design (modular structure) and view bind
 * https://github.com/sjarvela/kloudspeaker/wiki/Plugin-development
 * https://github.com/sjarvela/kloudspeaker/wiki/Creating-UI
 
+API changes:
+* Registration plugin is rewritten with client module, and is no longer required to be registered in index.html
+
 ### 2.6.10 (+ History 1.3 & Quota 1.3)
 
 Released 2015/5/10
