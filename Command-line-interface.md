@@ -4,9 +4,9 @@ System and plugins can register commands that can be run, optionally as specifie
 
 For example:
 
-    php kloudspeaker/backend/cmd.php upload --user=2 --src=/tmp/downloads/000948.pdf --target=2:/documents
+    php kloudspeaker/backend/cmd.php upload --user=2 --src=/tmp/downloads/000948.pdf --target=3:/documents
 
-This command would execute command named `upload`, and it would be run as user with id 2.
+This command would execute command named `upload`, and it would be run as user with id 2. The file would be uploaded into folder with ID 3 and subfolder "documents".
 
 ## Available commands
 
