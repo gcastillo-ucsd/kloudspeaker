@@ -3,9 +3,9 @@
 Released 2015/6/7
 
 Technical release, improves support for AMD design (modular structure) and includes rewritten plugins as modules:
-* Share plugin rewritten on most parts
-* Event logging plugin rewritten
-* Dropbox rewritten as module
+* Share plugin rewritten on most parts, no need to be registered in index.html
+* Event logging plugin rewritten, no need to be registered in index.html
+* Dropbox rewritten as module, no need to be registered in index.html
 * Better support for registering custom full views (example in share plugin)
 * Better support for registering custom config views from modules (example in event logging plugin)
 * Support for bound UI widget: config list
