@@ -1,4 +1,4 @@
-Mollify external interface is utility script for controlling Mollify outside, for example when integrating it into existing site.
+Kloudspeaker external interface is utility script for controlling Mollify outside, for example when integrating it into existing site.
 
 
 ## Functions
