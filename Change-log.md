@@ -4,7 +4,6 @@ Released 2015/6/26
 * Share plugin rewrite complete, example on how to use modules to publish config views, full views, dialog views, file column bubble etc
 * Trash bin expiration feature and small improvements
 * More mime type icons
-* New option for mail notificator: mail sender name
 * Small improvements and fixes in AMD support etc
 
 ### 2.6.12
