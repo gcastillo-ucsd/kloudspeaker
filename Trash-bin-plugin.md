@@ -4,7 +4,7 @@ Trash bin plugin acts differently based on whether _trash bin storage_ is enable
 
 2. With _trash bin storage_, the plugin will intercept delete actions and store deleted files/folders into separate trash bin folder. Contents of the trash bin can then be viewed, and files/folders can be restored or deleted permanently.
 
-**NOTE** Trash bin plugin is beta release, and does not yet have all functionality. For example, integration with plugins like Share or Quota is not yet added.
+**NOTE** Trash bin plugin is beta release, and does not yet have all functionality.
 
 ## Configuration
 
@@ -25,3 +25,11 @@ Trash bin storage can be enabled by defining folder location:
     )
 
 The value `folder` should have absolute path to the folder where trashed items are stored. This folder should not be under published Kloudspeaker folders, or even web server root if possible.
+
+Trash bin content can be set to expire after certain period with following option:
+
+    "TrashBin" => array(
+        "expiration_days" => EXPIRATION_DAYS
+    )
+
+This value sets maximum number of days deleted content is stored, after which they are automatically deleted permanently.
