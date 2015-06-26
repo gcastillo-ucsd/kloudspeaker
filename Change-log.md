@@ -1,3 +1,10 @@
+### 2.6.13
+
+Released 2015/6/26
+* Share plugin rewrite complete, example on how to use modules to publish config views, full views, dialog views, file column bubble etc
+* More mime type icons
+* Small improvements and fixes in AMD support etc
+
 ### 2.6.12
 
 Released 2015/6/7
