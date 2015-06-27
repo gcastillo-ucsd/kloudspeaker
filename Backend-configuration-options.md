@@ -101,7 +101,7 @@ Define the class responsible for sending the emails. This setting allows changin
 
 ## Mail notification sender (`mail_notification_from`)
 
-Define notification sender address (and optionally also name) used in mail notifications (for example "admin@yourhost.com", "Administrator <admin@yourhost.com>"). If no value is given (default), mail is sent with system default.
+Define notification sender address (and optionally also name) used in mail notifications (for example "`admin@yourhost.com`", "`Administrator <admin@yourhost.com>`"). If no value is given (default), mail is sent with system default.
 
 ## Enable URL retrieve (`enable_url_retrieve`)
 
