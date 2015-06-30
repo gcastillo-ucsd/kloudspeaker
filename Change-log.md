@@ -1,3 +1,10 @@
+### 2.6.14
+
+Released 2015/6/30
+* Fixed [issue #33](https://github.com/sjarvela/kloudspeaker/issues/33)
+* Updated localization: nederlands
+* Fixed trash bin menu not showing on some browsers
+
 ### 2.6.13
 
 Released 2015/6/26
