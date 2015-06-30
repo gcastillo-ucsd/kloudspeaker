@@ -48,20 +48,6 @@ To enable mail notifications, add following settings:
 
 The setting "mail_notification_from" defines the address which the mail is sent from.
 
-
-## Client
-
-Register client plugin with following client settings:
-
-	<script type="text/javascript">
-		kloudspeaker.App.init({
-			...
-			}, [
-				new kloudspeaker.plugin.RegistrationPlugin()
-			]
-		});
-	</script>
-
 # Folders
 
 In backend configuration, it is possible to list only folder ids that are added to the new user.
