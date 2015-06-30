@@ -77,6 +77,6 @@ For example:
 			"last-modified" : {},
 			"size": {}
 		}
-	}, [new ExifDetails()])
+	})
 
-This configuration will show last modification stamp and size for all files, except for pdf files only size. Image files (jpf and tiff) will also display EXIF data, which requires ExifDetails registered with the configuration.
+This configuration will show last modification stamp and size for all files, except for pdf files only size. Image files (jpf and tiff) will also display EXIF data.
