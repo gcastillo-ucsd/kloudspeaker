@@ -210,3 +210,20 @@ Possible return value for the action functions:
   * `true`: default action is skipped (used for custom actions)
 
 The options with string value are shortcuts for most common options, but by returning `true` you can define your own action handler.
+
+## Modules configuration
+
+With modules configuration, it is possible to define additional kloudspeaker modules that are loaded once the application is started.
+
+Also, if loading custom modules, it is possible to define the location of the modules (if loading async).
+
+Example configuration:
+
+            "modules": {
+                load: ['my-package/module1', 'my-package/module2'],
+                paths: {
+                    'my-package': '/kloudspeaker/my-modules'
+                }
+            }
+
+This configuration defines that two modules, "module1" and "module2", are loaded when application starts. These modules are loaded from package "my-package", which are set to be found from "/kloudspeaker/my-modules".
