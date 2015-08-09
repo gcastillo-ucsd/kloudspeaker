@@ -124,8 +124,7 @@ File list columns can be customized with setting 'list-view-columns'.
 
 The setting accepts following format:
 
-	<script type="text/javascript">
-		kloudspeaker.App.init({
+		app.init({
 			"file-view": {
 				"list-view-columns": {
 					"column-1-id": { column-1-settings: "" },
@@ -134,7 +133,6 @@ The setting accepts following format:
 				}
 			}
 		});
-	</script>
 
 Column ID identifies the data shown, which can be either built-in predefined column or plugin provided. 
 
@@ -159,21 +157,19 @@ Column settings accepts following settings:
 
 Example configuration:
 
-	<script type="text/javascript">
-		kloudspeaker.App.init({
+		app.init({
 			"list-view-columns": {
 				"name": {width: 250},
 				"type": {title:"myOwnColumnTitleKey"},
 				"size": {}
 			}
 		});
-	</script>
 
 ### Actions customizations
 
 File list actions can be customized with following syntax:
 
-	kloudspeaker.App.init({
+	app.init({
 		"file-view": {	
 			actions: {
 				onClick: function(item, ctx) {
