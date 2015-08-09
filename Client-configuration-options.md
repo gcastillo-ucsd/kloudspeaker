@@ -2,8 +2,8 @@ Following settings are available in client configuration:
 
 
 	<script type="text/javascript">
-		$(document).ready(function() {
-			kloudspeaker.App.init({
+		require(['kloudspeaker/app'], function(app) {
+			app.init({
 				"service-path": "backend/",				// service path
 				"service-param": false,					// service param
 				"languages": {},						// languages
@@ -20,11 +20,14 @@ Following settings are available in client configuration:
 						...								// file list column setup
 					},
 					...
-				}},
-				[
-					...									// client plugins
-				]
-			);
+				},
+				"modules": {
+					// modules configuration
+				},
+				plugins: {
+					// plugin configuration
+				}
+			});
 		});
 	</script>
 
