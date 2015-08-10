@@ -1,3 +1,5 @@
+Starting from 2.6.15, releases are now hosted at GitHub, and release notes are visible at [Releases page](https://github.com/sjarvela/kloudspeaker/releases)
+
 ### 2.6.14
 
 Released 2015/6/30
