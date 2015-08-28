@@ -18,7 +18,7 @@ To migrate existing Mollify installation to Kloudspeaker, do following:
 
 ## Legacy passwords
 
-In mollify version 2.2, passwords were created more secure way using hash and salt. However, upgrade could not create these new passwords, but instead they were updated on-the-fly whenever "old" passwords were encountered.
+Starting from Mollify version 2.2, passwords were created more secure way using hash and salt. However, upgrade could not create these new passwords, but instead they were updated on-the-fly whenever "old" passwords were encountered.
 
 In Kloudspeaker there is no support for legacy passwords, and if migration is done from Mollify version prior to 2.2, legacy support must be added manually.
 
