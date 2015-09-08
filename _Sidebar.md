@@ -14,6 +14,7 @@
  * [[File viewer editor|FileViewerEditor-plugin]]
  * [[Registration|Registration-plugin]]
  * [[Comments|Comments-plugin]]
+ * [[Share|Share-plugin]]
  * [[Archiver|Archiver-plugin]]
  * [[Item details|Item-details-plugin]]
  * [[Notificator|Notificator-plugin]]
