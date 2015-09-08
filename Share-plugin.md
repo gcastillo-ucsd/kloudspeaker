@@ -11,22 +11,11 @@ Configure plugin by adding following into configuration.php (or merge into exist
 		)
 	);
 
-And following into client settings:
-
-	<script type="text/javascript">
-		kloudspeaker.App.init({
-			...
-			},[
-				new kloudspeaker.plugin.SharePlugin()
-			]
-		});
-	</script>
-
 *NOTE* After configuration is done, share plugin requires installation via Kloudspeaker update util.
 
 ## Usage
 
-When share plugin has been registered in both, client and server, there will be a new option in file/folder popup called "Share".
+When share plugin has been registered, there will be a new option in file/folder popup called "Share".
 
 This will open a list for all shares made for the file or folder, where you can also get the link for the share.
 
@@ -34,14 +23,14 @@ This will open a list for all shares made for the file or folder, where you can 
 
 Share plugin provides share count column with column id `share-info`. For example:
 
-	<script type="text/javascript">
-		kloudspeaker.App.init({
+	require(['kloudspeaker/app'], function(app) {
+		app.init({
 			...
 			"list-view-columns": {
 				"share-info": {},
 				...
 			}
 		});
-	</script>
+	});
 
 Column will show how many shares current user has, or if someone else has shared the item. Clicking the icon also opens the share editor.
