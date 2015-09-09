@@ -24,9 +24,7 @@ Comments plugin provides comments count column with column id `comment-count`. F
 			"comment-count": {},
 			"type": {},
 			"size": {}
-		}, [
-			new kloudspeaker.plugin.CommentPlugin()
-		]
+		}
 	});
 
 For more info, see [[file list column customization|Client-configuration-options#file-list-column-customization]].
