@@ -2,23 +2,6 @@ File viewer and editor plugin is built-in plugin that provides file view, previe
 
 # Configuration
 
-## Client
-
-Client side needs the plugin registered in the application initialization:
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-            kloudspeaker.App.init({
-                ...
-            }, [
-                new kloudspeaker.plugin.FileViewerEditorPlugin(),
-                ...
-            ]);
-    });
-    </script>
-
-
-## Backend
 Plugin is registered with name "`FileViewerEditor`".
 
 File viewer has following settings:
@@ -60,6 +43,11 @@ Configuration:
 
     "Image" => array("gif", "png", "jpg")
 
+### ViewerJS
+
+Provides file viewer for PDF and ODF, uses [ViewerJS library](http://viewerjs.org/).
+
+**NOTE!** Viewer is published with AGP-3.0 license, see license text in viewer folder.
 
 ### Google
 
