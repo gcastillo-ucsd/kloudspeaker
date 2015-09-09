@@ -2,8 +2,6 @@ Registration plugin is built-in plugin that provides functionality for user self
 
 # Configuration
 
-## Backend
-
 Registration has following settings:
   * `require_approval` (by default TRUE)
   * `permission`
