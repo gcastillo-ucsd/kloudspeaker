@@ -14,34 +14,27 @@ Register plugin by adding following into configuration.php (or merge into existi
 	);
 
 
-And following into client settings:
-
-
-	<script type="text/javascript">
-		kloudspeaker.App.init({
-			...
-			}, [
-				new kloudspeaker.plugin.ItemDetailsPlugin({})
-			]
-		});
-	</script>
-
-
 ## Item details configuration
 
 Details shown for files or folders can be configured by the type, with following format:
 
 
-	new kloudspeaker.plugin.ItemDetailsPlugin({
-		[TYPE] : {
-			[DATA_KEY] : [CONFIGURATION],
+	require(['kloudspeaker/app'], function(app) {
+		app.init({
 			...
-		},
-		...
-	}, [
-		DATA_SPEC,
-		...
-	])
+			plugins : {
+				itemdetails : {
+					filetypes: {
+						[TYPE] : {
+							[DATA_KEY] : [CONFIGURATION],
+							...
+						},
+						...
+					}
+				}
+			}
+		});
+	});
 
 
 The type can be:
@@ -64,19 +57,31 @@ Configuration can override following:
 
 For example:
 
-	new kloudspeaker.plugin.ItemDetailsPlugin({
-		"pdf": {
-			"size" : {}
-		},
-		"jpg,tiff": {
-			"last-modified" : {},
-			"size": {},
-			"exif": {},
-		},
-		"*": {
-			"last-modified" : {},
-			"size": {}
-		}
-	})
+        require(['kloudspeaker/app'], function(app) {
+            app.init({
+                ...,
+                plugins: {
+                    "itemdetails": {
+                        filetypes: {
+                            "pdf": {
+                                "size": {}
+                            },
+                            "jpg,tiff": {
+                                "metadata-created": {},
+                                "last-modified": {},
+                                "size": {},
+                                "exif": {},
+                            },
+                            "*": {
+                                "metadata-created": {},
+                                "last-modified": {},
+                                "size": {}
+                            }
+                        }
+                    }
+                }
+            });
+        });
 
-This configuration will show last modification stamp and size for all files, except for pdf files only size. Image files (jpf and tiff) will also display EXIF data.
+
+This configuration will show created info, last modification stamp and size for all files, except for pdf files only size. Image files (jpf and tiff) will also display EXIF data.
