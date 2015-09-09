@@ -2,8 +2,6 @@ Archiver plugin is built-in plugin that provides possibility to extract zip arch
 
 ## Configuration
 
-### Backend
-
 Configure plugin by adding following into configuration.php:
 
 
@@ -29,16 +27,3 @@ Value "COMPRESSOR" is the method used for compressing files, options are:
 Values "`enable_download`", "`enable_compress`" and "`enable_extract`" control whether archiver actions "download", "compress" and "extract" are available.
 
 By default, all actions are enabled, but with this option they can be disabled.
-
-### Client
-
-Add following into client configuration:
-
-	<script type="text/javascript">
-		kloudspeaker.App.init({
-			...
-			}, [
-				new kloudspeaker.plugin.ArchiverPlugin()
-			]
-		});
-	</script>
