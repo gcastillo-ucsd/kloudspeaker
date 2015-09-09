@@ -2,8 +2,6 @@ Comments plugin is built-in plugin that provides possibility to comment any file
 
 ## Configuration
 
-### Backend
-
 Configure plugin by adding following into `configuration.php` (or merge into existing plugins array):
 
 	$CONFIGURATION = array(
@@ -13,25 +11,13 @@ Configure plugin by adding following into `configuration.php` (or merge into exi
 		)
 	);
 
-### Client
-
-Add following into client settings:
-
-	kloudspeaker.App.init({
-		...
-		}, [
-			new kloudspeaker.plugin.CommentPlugin()
-		]
-	});
-
-
 *NOTE* After configuration is done, comments plugin requires installation via Kloudspeaker update util.
 
 ## File list columns
 
 Comments plugin provides comments count column with column id `comment-count`. For example:
 
-	kloudspeaker.App.init({
+	app.init({
 		...
 		"list-view-columns": {
 			"name": {},
