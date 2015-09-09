@@ -12,18 +12,6 @@ Configure plugin by adding following into configuration.php:
 		)
 	);
 
-And following into client settings:
-
-
-	<script type="text/javascript">
-		kloudspeaker.App.init({
-				...
-			}, [
-				...,
-				new kloudspeaker.plugin.ItemCollectionPlugin()
-			]
-		});
-	</script>
 
 *NOTE* After configuration is done, share plugin requires installation via Kloudspeaker update util.
 
