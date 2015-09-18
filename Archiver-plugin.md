@@ -9,9 +9,9 @@ Configure plugin by adding following into configuration.php:
 		...,
 		"plugins" => array(
 			"Archiver" => array(
-				"compressor" => "[COMPRESSOR]"
+				"compressor" => "[COMPRESSOR]",
 				"enable_download" => TRUE/FALSE,
-				"enable_compress" => TRUE/FALSE
+				"enable_compress" => TRUE/FALSE,
 				"enable_extract" => TRUE/FALSE
 			)
 		)
