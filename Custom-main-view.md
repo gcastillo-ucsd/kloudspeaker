@@ -1,13 +1,14 @@
 It is possible to create custom main views that are listed in the toolbar next to "Files" and "Configuration".
 
 1. Registering custom module in kloudspeaker client init
-
+    
     "modules": {
         load: ['kloudspeaker/ui/dropbox', 'my-package'],
         paths: { 
             'my-package': '/path/to/my-package' }
         }
     }
+    
 
 2. Create folder "my-package" into path defined above
 
