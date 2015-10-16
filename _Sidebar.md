@@ -33,5 +33,6 @@
  * [[Client modules|Client-modules]]
  * [[Plugin|Plugin-development]]
  * [[Creating UI|Creating-UI]]
+  * [[Custom main view|Custom-main-view]]
  * [[Client API|Client-API]]
 * [[Change log|Change-log]]
