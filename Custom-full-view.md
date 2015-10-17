@@ -1,5 +1,3 @@
-## Custom full views
-
 Using module "`kloudspeaker/ui/views`" it is possible to register full application views.
 
     views.registerView("myview", function(rqParts, urlParams) { ... });
