@@ -80,3 +80,21 @@ With custom main views, it is possible to publish subviews.
             // views
         ]
     });
+
+Each view definition has id (to be referred, for example, in nav definition) and title. Depending on view type, it can have
+* only 'view' if static html page is loaded
+* model with optional view to load custom view module
+
+For example
+
+        subviews: [{
+            id: 'subview1',
+            title: 'i18n:subView1Title',
+            view: 'my-package/subview1.html'
+        }, {
+            id: 'subview2',
+            title: 'i18n:subView2Title',
+            model: 'my-package/subview2'
+        }]
+
+This defines two views: "view1" with static html page "subview1.html" and "view2" that loads module "my-package/subview2" with a view with same name. See [composition](https://github.com/sjarvela/kloudspeaker/wiki/Creating-UI#composition)
