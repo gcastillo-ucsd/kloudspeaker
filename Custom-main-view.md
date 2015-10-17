@@ -97,4 +97,4 @@ For example
             model: 'my-package/subview2'
         }]
 
-This defines two views: "view1" with static html page "subview1.html" and "view2" that loads module "my-package/subview2" with a view with same name. See [composition](https://github.com/sjarvela/kloudspeaker/wiki/Creating-UI#composition)
+This defines two views: "view1" with static html page "subview1.html" and "view2" that loads module "my-package/subview2" with a view with same name. For more info, see [composition](https://github.com/sjarvela/kloudspeaker/wiki/Creating-UI#composition)
