@@ -38,4 +38,5 @@
     * [[Config views|Custom-config-view]]
     * [[Dialogs|Custom-dialog]]
  * [[Client API|Client-API]]
+ * [[Development environment|Setting-up-development-environment]]
 * [[Change log|Change-log]]
