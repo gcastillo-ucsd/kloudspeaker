@@ -4,4 +4,4 @@ For features, requirements, screenshots, downloads etc, visit project web page i
 
 To get started, see [[Installation instructions|Installation]]
 
-Kloudspeaker is based on [Mollify](https://github.com/sjarvela/mollify), if you are migrating existing Mollify installation, see [[migration instructions|Migration-from-mollify]].
+Kloudspeaker was formerly known as [Mollify](https://github.com/sjarvela/mollify), if you are migrating existing Mollify installation, see [[migration instructions|Migration-from-mollify]].
