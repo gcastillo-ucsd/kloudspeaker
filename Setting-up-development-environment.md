@@ -8,7 +8,7 @@ Running development version of Kloudspeaker requires installing node.js.
 
 * Create folder where app is published
 
-* Copy development index.html into app web folder
+* Copy [development index.html](https://github.com/sjarvela/kloudspeaker/blob/master/example_dev_index.html) into app web folder, and modify if necessary
 
 * Create symbolic links from source folders to app web folder: backend, bower_components, css, fonts, localization and templates
 
