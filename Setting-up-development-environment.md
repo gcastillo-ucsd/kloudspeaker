@@ -4,7 +4,7 @@ Running development version of Kloudspeaker requires installing node.js.
 
 2. Install project dependencies by running "npm install" and "bower install" in kloudspeaker root.
 
-3. Set up local web server
+3. Set up local web server if repo is not cloned under web root
 
 * Create folder where app is published
 
