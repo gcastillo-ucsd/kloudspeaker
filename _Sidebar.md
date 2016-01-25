@@ -24,6 +24,7 @@
  * [[Trash bin|Trash-bin-plugin]]
  * [[WebDAV|WebDAV-plugin]]
 * [[Permissions|Permissions]]
+* [[Security|Security]]
 * [[External interface|External-interface]]
 * [[Command line interface|Command-line-interface]]
 * Customizations
