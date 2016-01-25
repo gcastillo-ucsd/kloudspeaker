@@ -14,14 +14,11 @@ Application is configured in the js app initialization, and the syntax of the in
 
     <script type="text/javascript">
         $(document).ready(function() {
-                kloudspeaker.App.init({
-                                ... // CONFIGURATION OPTIONS
-                        },
-                        [
-                                ... // CLIENT PLUGINS
-                        ]
-                );
-        });
+            require(['kloudspeaker/app'], function(app) {
+                app.init({
+                    ... // CONFIGURATION OPTIONS
+                });
+            });
     </script>
 
 For all possible configuration options, see [[Client Configuration Options | Client-configuration-options]].
