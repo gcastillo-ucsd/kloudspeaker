@@ -19,11 +19,13 @@ Comments plugin provides comments count column with column id `comment-count`. F
 
 	app.init({
 		...
-		"list-view-columns": {
-			"name": {},
-			"comment-count": {},
-			"type": {},
-			"size": {}
+		"file-view": {
+			"list-view-columns": {
+				"name": {},
+				"comment-count": {},
+				"type": {},
+				"size": {}
+			}
 		}
 	});
 
