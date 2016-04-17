@@ -35,9 +35,9 @@ Following example shows how to add new user and assign a folder with read/write 
 
     <?php 
         set_include_path("backend/".PATH_SEPARATOR.get_include_path()); 
-        require_once("external/MollifyExternalInterface.class.php"); 
-        $ks = MollifyExternalInterface(); 
-        $userId = $mollify->addUser("New User", "password", "email");
+        require_once("external/KloudspeakerExternalInterface.class.php"); 
+        $ks = KloudspeakerExternalInterface(); 
+        $userId = $ks->addUser("New User", "password", "email");
         $folderId = GET_KLOUDSPEAKER_FOLDER_ID_SOMEHOW();
         $ks->addUserFolder($userId, $folderId);
         $ks->setUserFolderFilesystemPermission($userId, $folderId, "rw"); 
