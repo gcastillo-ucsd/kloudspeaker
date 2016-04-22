@@ -7,7 +7,7 @@ Following settings are available in client configuration:
 				"service-path": "backend/",				// service path
 				"service-param": false,					// service param
 				"languages": {},						// languages
-				"view-url": false,						// reflect view in url
+				"view-url": true,						// reflect view in url
 				"app-element-id": "kloudspeaker",			// application element ID
 				"html5-uploader": {},					// uploader
 
@@ -53,7 +53,7 @@ By default, Kloudspeaker expects to find div element with ID "kloudspeaker" from
 
 ### Reflect view in URL (`view-url`)
 
-Kloudspeaker can reflect the current view in the browser url (if browser supports history pushState). By default this is disabled.
+Kloudspeaker can reflect the current view in the browser url (if browser supports history pushState). By default this is enabled.
 
 ### Uploader (`html5-uploader`)
 
