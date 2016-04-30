@@ -13,6 +13,18 @@ Uploader settings are defined in Kloudspeaker app init:
 
 For more options, see [JQuery-File-Upload options](https://github.com/blueimp/jQuery-File-Upload/wiki/Options)
 
+## Server max upload limit
+
+To control server max upload limit, change following settings in PHP ini:
+
+    ; Maximum allowed size for single uploaded file
+    upload_max_filesize = 40M
+    
+    ; Maximum allowed total size of post request, must be greater than or equal to upload_max_filesize
+    post_max_size = 40M
+
+These settings control regular uploads, but using HTML5 uploader options, these restrictions can be avoided by using alternative upload methods.
+
 ## Avoiding server max upload size restrictions
 
 To avoid server side max upload size restrictions, following HTML5 options are available
