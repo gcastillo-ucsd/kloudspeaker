@@ -55,6 +55,10 @@ Enables backend debug mode. This writes debug information to PHP error log and e
 
 Possible values are `TRUE` and `FALSE` (default).
 
+## Session time (`session_time`)
+
+Max time session is alive when there is no activity. Value is in seconds, by default 7200 (2 hours).
+
 ## Server timezone (`timezone`)
 
 Server timezone, needed for PHP datetime functions. Without this information, some functions may fail. For values, see [http://php.net/manual/en/timezones.php]
