@@ -7,14 +7,16 @@ Following settings are available in client configuration:
 				"service-path": "backend/",				// service path
 				"service-param": false,					// service param
 				"languages": {},						// languages
+				"default-view": "/files/",
 				"view-url": true,						// reflect view in url
-				"app-element-id": "kloudspeaker",			// application element ID
+				"app-element-id": "kloudspeaker",		// application element ID
 				"html5-uploader": {},					// uploader
 
 				"file-view": {							// file view options
 					"drop-type": ...,					// customize drag&drop operation
 					"create-empty-file-action": false,	// create empty file
 					"default-view-mode": "list",		// default view mode
+					"default-sort": null,
 					"icon-view-thumbnails": false,		// show icon thumbnails in icon view mode
 					"list-view-columns": {
 						...								// file list column setup
@@ -42,6 +44,10 @@ Location of the backend script relative to the index.html file.
 By default, REST API service is part of the request path, for example "http://host/kloudspeaker/backend/r.php/request/path/", where "request/path" would be the service requested.
 
 Some servers don't support this format, and PHP application does not receive the service path at all. In this cases, enabling `service-param`, these requests are transformed into using URL parameter "http://host/kloudspeaker/backend/r.php?sp=request/path/"
+
+### Default view (`default-view`)
+
+The view opened after login, if url does not specify the view. By default, files view is opened.
 
 ### Languages (`languages`)
 
@@ -105,6 +111,17 @@ Also, value can be a function where custom logic can be defined, for example:
 In this example multiple items are always copied, and single item copied when dragged from different root folder.
 
 Possible return values from this function can be "`copy`" or "`move`".
+
+### Default sort (`default-sort`)
+
+The sort criteria used by default in list view. For example:
+
+	"default-sort": {
+		col: 'modified',
+		asc: false
+	}
+
+The value "col" is the id of the column, and "asc" specifies the sort order (if not given, will be in ascending order). By default, list is ordered with column "name" in ascending order.
 
 ### Create empty file (`create-empty-file-action`)
 
