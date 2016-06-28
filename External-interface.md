@@ -27,8 +27,7 @@ Following example shows how to make user logged in (only need to resolve Kloudsp
         set_include_path("backend/".PATH_SEPARATOR.get_include_path()); 
         require_once("external/KloudspeakerExternalInterface.class.php"); 
         $ks = KloudspeakerExternalInterface(); 
-        $ksUserId = GET_KLOUDSPEAKER_USER_ID(); 
-        $ks->authenticate($mollifyUserId); 
+        $ks->authenticate(GET_KLOUDSPEAKER_USER_ID_SOMEHOW()); 
     ?>
 
 Following example shows how to add new user and assign a folder with read/write permissions:
