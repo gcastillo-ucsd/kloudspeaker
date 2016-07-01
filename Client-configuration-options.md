@@ -143,15 +143,34 @@ The setting accepts following format:
 
 		app.init({
 			"file-view": {
-				"list-view-columns": {
-					"column-1-id": { column-1-settings: "" },
-					"column-2-id": { column-2-settings: "" },
+				"list-view-columns": [
+					{ /* column 1 settings */ },
+					"column-2-id",
 					...
-				}
+				]
 			}
 		});
 
-Column ID identifies the data shown, which can be either built-in predefined column or plugin provided. 
+Option takes a list of columns in the order they are displayed. Each value in the list can be either string (column ID) or object with column settings.
+
+Column ID identifies the data shown, which can be either built-in predefined column or plugin provided.
+
+For example:
+
+		app.init({
+			"file-view": {
+				"list-view-columns": [
+					"name",
+					{
+						id: 'size',
+						width: 250
+					},
+					"type"
+				]
+			}
+		});
+
+This example shows three columns in following order: "name", "size" and "type". For column "size", also width is set.
 
 Kloudspeaker provides following columns:
 
