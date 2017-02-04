@@ -108,8 +108,8 @@ For user folders definition in backend configuration, the parameters are:
 
 # Registration process
 
-Once registration plugin is installed, login page will display registration link. Optionally, registration page can be opened diractly with url "`http://[PATH_TO_MOLLIFY]/?v=registration/new`".
+Once registration plugin is installed, login page will display registration link. Optionally, registration page can be opened diractly with url "`http://[PATH_TO_KLOUDSPEAKER]/?v=registration/new`".
 
 Users can fill out the form presented, and they will receive a notification mail after completing the form. Mail provides a link for confirming the registration.
 
-Optionally confirmation can be done at "`http://[PATH_TO_MOLLIFY]/?v=registration/confirm&email=[EMAIL]`", where `[EMAIL]` is the email address (in url encoded format) given in registration. This opens a form where the registration key is required.
+Optionally confirmation can be done at "`http://[PATH_TO_KLOUDSPEAKER]/?v=registration/confirm&email=[EMAIL]`", where `[EMAIL]` is the email address (in url encoded format) given in registration. This opens a form where the registration key is required.
