@@ -258,4 +258,6 @@ See [[customization|Customizing-resources]] for more info.
 
 ## Disable /dev/urandom access (`no_dev_urandom`)
 
-With this setting, PHPass library can be prevented accessing /dev/urandom (used for generating random sequences). By default FALSE
+With this setting, PHPass library can be prevented accessing `/dev/urandom` (used for generating random sequences). By default FALSE.
+
+Set this to TRUE if your host does not support `/dev/urandom` or if its access is prevented (for example with PHP setting `open_basedir`).
