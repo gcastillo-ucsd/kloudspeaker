@@ -35,20 +35,11 @@ For example:
 
 Registration plugin requires installation via Kloudspeaker update util.
 
-To enable mail notifications, add following settings:
-
-	$CONFIGURATION = array(
-		...,
-		"enable_mail_notification" => TRUE,
-		"mail_notification_from" => "admin@your.host"
-	);
-
-
-The setting "mail_notification_from" defines the address which the mail is sent from.
+To enable mail notifications, see [Mail](https://github.com/sjarvela/kloudspeaker/wiki/Mail)
 
 # Folders
 
-In backend configuration, it is possible to list only folder ids that are added to the new user.
+In plugin configuration it is possible to list only folder ids that are added to the new user.
 
 	$CONFIGURATION = array(
 		...,
@@ -79,7 +70,7 @@ Property "`name`" (optional) can set a name different than the default.
 
 Property "`permissions`" can set assigned folder permissions for the new user. If only single string value given, it is assumed to be filesystem item access permission (see [Permissions]).
 
-To give other permissions (see [Permissions]), use array syntax:
+To give other permissions (see Permissions), use array syntax:
 
 	$CONFIGURATION = array(
 		...,
@@ -100,7 +91,7 @@ To give other permissions (see [Permissions]), use array syntax:
 
 # User Folder
 
-For user folders definition in backend configuration, the parameters are:
+For user folders definition in plugin configuration, the parameters are:
   *  "`path`" is the place where user folders are created, use a folder that is not published.
   *  "`folder_name`" is a name for the folder. Leave it out if you want to name it after the user.
   *  "`add_to_users`" is a list of user ids that also see this folder. Useful for listing admins who need to control these folders.
