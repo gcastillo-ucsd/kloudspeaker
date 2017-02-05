@@ -21,6 +21,7 @@ Following settings are available in client configuration:
 					"list-view-columns": {
 						...								// file list column setup
 					},
+					"list-view-hierarchy": false,		// show hierarchy in list view
 					...
 				},
 				"modules": {
@@ -134,6 +135,10 @@ With this option, icon view can display supported images (gif, png, jpg, jpeg) w
 ### Default view mode (`default-view-mode`)
 
 View mode selected when Kloudspeaker is launched, options are "`list`" (default), "`small-icon`" and "`large-icon`".
+
+### List view hierarchy (`list-view-hierarchy`)
+
+List view can show folder hierarchy, which allows expanding folders in the list. By default this is disabled.
 
 ### File list column customization
 
